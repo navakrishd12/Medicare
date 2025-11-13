@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Apps Comparison</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f7fb;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      color: #004aad;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+    header p {
+      font-size: 16px;
+      color: #555;
+    }
+    .app-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 700px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+    .app-title {
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      color: #004aad;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .app-title:hover { color: #007bff; }
+    .app-content {
+      display: none;
+      margin-top: 10px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+    ul { margin: 10px 0 0 20px; }
+    ul li { margin-bottom: 6px; }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hospital Apps Overview</h1>
+  <p>Click the app name to see its key limitations and features.</p>
+</header>
+
+<div class="app-box">
+  <div class="app-title" onclick="toggle('kauvery')">
+    🏥 Kauvery Kare
+    <span id="kauvery-arrow">+</span>
+  </div>
+  <div id="kauvery" class="app-content">
+    <p><b>Kauvery Kare</b> helps patients <b>book appointments, check reports, and manage hospital services</b> through Kauvery Hospitals.  
+    However, it’s <b>restricted to Kauvery’s hospital network</b> — your data cannot be accessed outside.  
+    </p>
+    <p><b>Limitations:</b></p>
+    <ul>
+      <li>Waiting periods for pre-existing conditions</li>
+      <li>Co-payment requirements</li>
+      <li>Coverage limits for some treatments</li>
+      <li>Premium increases with age</li>
+      <li>Cashless service only in Kauvery Hospitals</li>
+    </ul>
+  </div>
+</div>
+
+<div class="app-box">
+  <div class="app-title" onclick="toggle('apollo')">
+    🏨 Apollo 24/7
+    <span id="apollo-arrow">+</span>
+  </div>
+  <div id="apollo" class="app-content">
+    <p><b>Apollo 24/7</b> offers <b>doctor consultations, reports, pharmacy, and online services</b> across Apollo Hospitals.  
+    Yet, it’s <b>limited to the Apollo network</b> and doesn’t share data with other hospitals.</p>
+    <p><b>Limitations:</b></p>
+    <ul>
+      <li>Waiting periods before coverage applies</li>
+      <li>Specific exclusions for treatments</li>
+      <li>Co-payment obligations</li>
+      <li>Higher premiums with age</li>
+      <li>Cashless facilities only in Apollo’s network</li>
+    </ul>
+  </div>
+</div>
+
+<footer>© 2025 Hospital App Comparison | Educational Demo</footer>
+
+<script>
+function toggle(id) {
+  var content = document.getElementById(id);
+  var arrow = document.getElementById(id + "-arrow");
+  if (content.style.display === "block") {
+    content.style.display = "none";
+    arrow.textContent = "+";
+  } else {
+    content.style.display = "block";
+    arrow.textContent = "−";
+  }
+}
+</script>
+
+</body>
+</html>
